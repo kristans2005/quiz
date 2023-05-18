@@ -1,0 +1,122 @@
+html {
+    --galvenes-augstums: 60px;
+}
+
+html[data-theme="light"]{
+    --primery-color: #ECCDB4;
+    --primery-color2: #F0EDD4;
+    --primery-color3:#F9FBE7 ;
+    --text-color: black;
+    --invert: 0%;
+}
+  
+html[data-theme="dark"]{
+    --primery-color: #5C469C;
+    --primery-color2: #1D267D;
+    --primery-color3: #0C134F;
+    --text-color: white;
+    --invert: 100%;
+}
+  
+body{
+    background-color: var(--primery-color2);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: var(--galvenes-augstums);
+    width: 100vw;
+    background-color:var(--primery-color);
+  }
+
+main {
+    padding-top: var(--galvenes-augstums);
+    margin-left: 50px;
+}
+
+.container{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 270px 270px;
+    grid-template-rows: 100px 100px;
+    gap: 30px;
+}
+
+.container2{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 200px;
+    height: 70px;
+    background-color: var(--primery-color);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#toggle-theme{
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+    height: 40px;
+    width: 40px;
+    opacity: 0;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.item{
+    background-color:var(--primery-color3);
+    border-radius: 15px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input{
+    height: 20px;
+    width: 20px;
+}
+
+.mode_img{
+    filter: invert(var(--invert));
+    position: absolute;
+    right: 0;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+#dark_img{
+    visibility: hidden;
+}
+
+#toggle-theme:checked ~ #dark_img {
+    visibility: visible;
+}
+
+#light_img{
+    visibility: visible;
+}
+
+#toggle-theme:checked ~ #light_img {
+    visibility: hidden;
+}
+
+.p-text{
+    margin-top: 30px;
+}
+
+p{
+    margin: 0px;
+    font-size: 40px;
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
